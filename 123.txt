@@ -1,0 +1,5 @@
+﻿"//p[contains(text(),'Professional investor')]"
+"//span[contains(text(),'Continue')]"
+python -m pytest
+
+python3 -m pytest -v --driver Chrome --driver-path ~/chrome4tests/*
