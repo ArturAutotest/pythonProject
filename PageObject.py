@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 import time
 import allure
 from allure_commons.types import AttachmentType
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class Find_element_click(BasePage):
@@ -47,5 +49,58 @@ class Find_element_click(BasePage):
         search_box.send_keys("Qbug.151?200")
         time.sleep(1)
 
+    def waited_func_2(self):
+        self.driver.implicitly_wait(10)
+        search_box = self.driver.find_element(By.XPATH, "//p[contains(text(),'Professional investor')]")
+        search_box.click()
     
+    def continue_button_1(self):
+        self.driver.implicitly_wait(10)
+        search_box = self.driver.find_element(By.XPATH, "//span[contains(text(),'Continue')]")
+        search_box.click()
+
+    def company_button(self):
+        self.driver.implicitly_wait(10)
+        search_box = self.driver.find_element(By.XPATH, "//p[contains(text(),'Company')]")
+        search_box.click()
+        
+    def invest_vogeman_green_ship(self):
+        self.driver.implicitly_wait(10)
+        search_box = self.driver.find_element(By.XPATH, "//p[contains(text(),'Vogemann Green Ship')]/..//..//span[text()='Invest']")
+        search_box.click()
+        
+
+    def ok_button(self):
+        self.driver.implicitly_wait(10)
+        search_box = self.driver.find_element(By.XPATH, "//span[contains(text(),'OK')]")
+        search_box.click()
     
+    def switch_page_2(self):
+        self.driver.switch_to.window(self.driver.window_handles[1])
+    
+    def next_button(self):
+        self.driver.implicitly_wait(10)
+        search_box = self.driver.find_element(By.XPATH, "//span[contains(text(),'Next')]")
+        search_box.click()
+    
+    def purchase_order_button(self):
+        self.driver.implicitly_wait(10)
+        search_box = self.driver.find_element(By.XPATH, "//span[contains(text(),'Purchase order')]")
+        search_box.click()
+
+    def purchase_order_confirmations(self):
+        self.driver.implicitly_wait(10)
+        search_box = self.driver.find_element(By.XPATH, "//label[@for='checkbox-document-item-0']//div")
+        search_box.click()
+        self.driver.implicitly_wait(10)
+        search_box = self.driver.find_element(By.XPATH, "//label[@for='checkbox-document-item-1']//div")
+        search_box.click()
+        self.driver.implicitly_wait(10)
+        search_box = self.driver.find_element(By.XPATH, "//label[@for='checkbox-document-item-2']//div")
+        search_box.click()
+        self.driver.implicitly_wait(10)
+        search_box = self.driver.find_element(By.XPATH, "//label[@for='checkbox-document-item-3']//div")
+        search_box.click()
+        self.driver.implicitly_wait(10)
+        search_box = self.driver.find_element(By.XPATH, "//label[@for='checkbox-document-item-4']//div")
+        search_box.click()
